@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexConsulta - Tu Asistente Legal Personalizado</title>
+    <meta name="description" content="Plataforma integral de consultoría legal con directorio de abogados, recursos gratuitos y asistente virtual especializado en derecho hispanohablante.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand" onclick="showSection('home')">
+                <i class="fas fa-balance-scale"></i>
+                <span>LexConsulta</span>
+            </div>
+            
+            <nav class="nav-desktop">
+                <button onclick="showSection('home')" class="nav-link active" data-section="home">Inicio</button>
+                <button onclick="showSection('directory')" class="nav-link" data-section="directory">Directorio</button>
+                <button onclick="showSection('resources')" class="nav-link" data-section="resources">Recursos</button>
+                <button onclick="showSection('processes')" class="nav-link" data-section="processes">Procesos</button>
+                <button onclick="showSection('news')" class="nav-link" data-section="news">Noticias</button>
+                <button onclick="showSection('chat')" class="nav-link" data-section="chat">Consulta</button>
+            </nav>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <button onclick="showSection('home'); toggleMobileMenu()">Inicio</button>
+            <button onclick="showSection('directory'); toggleMobileMenu()">Directorio</button>
+            <button onclick="showSection('resources'); toggleMobileMenu()">Recursos</button>
+            <button onclick="showSection('processes'); toggleMobileMenu()">Procesos</button>
+            <button onclick="showSection('news'); toggleMobileMenu()">Noticias</button>
+            <button onclick="showSection('chat'); toggleMobileMenu()">Consulta</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <!-- Hero -->
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Tu Asistente Legal <span class="highlight">Personalizado</span></h1>
+                        <p>Accede a consultoría legal profesional, encuentra abogados especializados y obtén recursos jurídicos gratuitos en español</p>
+                        
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="showSection('chat')">Consulta Gratuita</button>
+                            <button class="btn-secondary" onclick="showSection('resources')">Explorar Recursos</button>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Abogados Registrados</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-file-text"></i></div>
+                                <div class="stat-number">1000+</div>
+                                <div class="stat-label">Documentos Legales</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Asistente Virtual</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-icon"><i class="fas fa-search"></i></div>
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Especialidades</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Services -->
+            <div class="services">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Servicios Destacados</h2>
+                        <p>Accede a recursos legales completos y consultoría profesional</p>
+                    </div>
+                    
+                    <div class="services-grid">
+                        <div class="service-card" onclick="showSection('directory')">
+                            <div class="service-icon">⚖️</div>
+                            <h3>Directorio de Abogados</h3>
+                            <p>Encuentra profesionales legales especializados cerca de ti</p>
+                        </div>
+                        <div class="service-card" onclick="showSection('resources')">
+                            <div class="service-icon">📚</div>
+                            <h3>Recursos Gratuitos</h3>
+                            <p>Documentos, plantillas y guías legales de libre acceso</p>
+                        </div>
+                        <div class="service-card" onclick="showSection('processes')">
+                            <div class="service-icon">📋</div>
+                            <h3>Procesos Legales</h3>
+                            <p>Guías paso a paso para diferentes procedimientos jurídicos</p>
+                        </div>
+                        <div class="service-card" onclick="showSection('chat')">
+                            <div class="service-icon">💬</div>
+                            <h3>Consulta Virtual</h3>
+                            <p>Asistente legal inteligente para tus consultas inmediatas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="chat-header-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h1>Consulta Legal Virtual</h1>
+                    <p>Obtén orientación legal inmediata con nuestro asistente inteligente especializado en derecho español</p>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="chat-bot-info">
+                            <div class="bot-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3>Asistente Legal LexConsulta</h3>
+                                <p>Especialista en Derecho Español</p>
+                            </div>
+                        </div>
+                        <div class="online-status">
+                            <span class="status-dot"></span>
+                            En línea
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">¡Hola! Soy tu asistente legal personalizado. Puedo ayudarte con consultas sobre derecho civil, penal, laboral, fiscal y más. ¿En qué tema legal necesitas ayuda hoy?</div>
+                                <div class="message-time" id="initialTime"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-questions">
+                        <h4>Preguntas frecuentes:</h4>
+                        <div class="questions-grid" id="quickQuestions"></div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <textarea id="messageInput" placeholder="Escribe tu consulta legal aquí..." rows="2"></textarea>
+                        <button id="sendButton" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="disclaimer-text">⚠️ Esta información es orientativa. Para casos específicos, consulta con un abogado especializado.</p>
+                </div>
+                
+                <div class="legal-disclaimer">
+                    <h3>Aviso Legal Importante</h3>
+                    <p>Este asistente virtual proporciona información legal general con fines educativos. No constituye asesoramiento legal profesional y no reemplaza la consulta con un abogado colegiado. Para situaciones específicas, siempre consulte con un profesional legal cualificado. La información puede variar según la comunidad autónoma y las circunstancias específicas de cada caso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directory Section -->
+        <section id="directory" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Directorio de Abogados</h1>
+                    <p>Encuentra profesionales legales verificados y especializados en tu área de necesidad</p>
+                </div>
+                
+                <div class="search-filters">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar por nombre o especialidad..." id="lawyerSearch">
+                    </div>
+                    <select id="specialtyFilter">
+                        <option value="">Todas las especialidades</option>
+                        <option value="Derecho Civil">Derecho Civil</option>
+                        <option value="Derecho Penal">Derecho Penal</option>
+                        <option value="Derecho Laboral">Derecho Laboral</option>
+                        <option value="Derecho Familiar">Derecho Familiar</option>
+                        <option value="Derecho Mercantil">Derecho Mercantil</option>
+                        <option value="Derecho Fiscal">Derecho Fiscal</option>
+                    </select>
+                    <input type="text" placeholder="Ciudad o región..." id="locationFilter">
+                    <button class="filter-btn"><i class="fas fa-filter"></i> Filtrar</button>
+                </div>
+                
+                <div class="lawyers-grid" id="lawyersGrid"></div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Recursos Legales Gratuitos</h1>
+                    <p>Descarga plantillas, guías y documentos legales verificados por profesionales</p>
+                </div>
+                
+                <div class="search-filters">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar recursos legales..." id="resourceSearch">
+                    </div>
+                    <select id="categoryFilter">
+                        <option value="">Todas las categorías</option>
+                        <option value="Contratos">Contratos</option>
+                        <option value="Testamentos">Testamentos</option>
+                        <option value="Divorcios">Divorcios</option>
+                        <option value="Laboral">Laboral</option>
+                        <option value="Inmobiliario">Inmobiliario</option>
+                        <option value="Mercantil">Mercantil</option>
+                        <option value="Fiscal">Fiscal</option>
+                    </select>
+                </div>
+                
+                <div class="resources-grid" id="resourcesGrid"></div>
+                
+                <div class="faq-section">
+                    <h2>Preguntas Frecuentes</h2>
+                    <div class="faq-item">
+                        <h3>¿Los documentos están actualizados con la legislación vigente?</h3>
+                        <p>Sí, todos nuestros documentos son revisados regularmente por profesionales legales para asegurar su conformidad con la legislación actual.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Puedo modificar las plantillas descargadas?</h3>
+                        <p>Las plantillas en formato DOCX son completamente editables. Recomendamos revisar cualquier modificación con un profesional legal.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Hay algún costo por descargar los recursos?</h3>
+                        <p>No, todos nuestros recursos legales básicos son completamente gratuitos. Algunos documentos especializados pueden requerir registro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processes Section -->
+        <section id="processes" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Guías de Procesos Legales</h1>
+                    <p>Información detallada sobre procedimientos jurídicos con pasos, plazos y costos estimados</p>
+                </div>
+                
+                <div class="processes-grid" id="processesGrid"></div>
+                
+                <div class="additional-info">
+                    <h2>Información Adicional</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Justicia Gratuita</h3>
+                            <p>Si tus ingresos son limitados, puedes solicitar asistencia jurídica gratuita. Los límites se actualizan anualmente según el IPREM.</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Plazos Procesales</h3>
+                            <p>Todos los plazos indicados son estimados y pueden variar según la carga de trabajo de los juzgados y la complejidad del caso.</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Costos Variables</h3>
+                            <p>Los costos incluyen tasas judiciales, honorarios profesionales y gastos adicionales. Pueden variar según la comunidad autónoma y complejidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Noticias y Actualizaciones Legales</h1>
+                    <p>Mantente informado sobre los últimos cambios en la legislación y jurisprudencia</p>
+                </div>
+                
+                <div class="news-layout">
+                    <div class="news-main">
+                        <div class="news-filters">
+                            <button class="filter-btn active" onclick="filterNews('')">Todas</button>
+                            <button class="filter-btn" onclick="filterNews('Derecho Civil')">Derecho Civil</button>
+                            <button class="filter-btn" onclick="filterNews('Derecho Penal')">Derecho Penal</button>
+                            <button class="filter-btn" onclick="filterNews('Derecho Laboral')">Derecho Laboral</button>
+                            <button class="filter-btn" onclick="filterNews('Derecho Fiscal')">Derecho Fiscal</button>
+                        </div>
+                        
+                        <div class="news-grid" id="newsGrid"></div>
+                    </div>
+                    
+                    <div class="news-sidebar">
+                        <div class="trending-section">
+                            <h3><i class="fas fa-trending-up"></i> Tendencias</h3>
+                            <div id="trendingNews"></div>
+                        </div>
+                        
+                        <div class="links-section">
+                            <h3>Enlaces de Interés</h3>
+                            <div class="links-list">
+                                <a href="#" target="_blank">→ Boletín Oficial del Estado</a>
+                                <a href="#" target="_blank">→ Tribunal Supremo</a>
+                                <a href="#" target="_blank">→ Tribunal Constitucional</a>
+                                <a href="#" target="_blank">→ Consejo General del Poder Judicial</a>
+                                <a href="#" target="_blank">→ Ministerio de Justicia</a>
+                                <a href="#" target="_blank">→ Agencia Tributaria</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <i class="fas fa-balance-scale"></i>
+                        <span>LexConsulta</span>
+                    </div>
+                    <p>Tu plataforma integral de consultoría legal en español. Conectamos profesionales del derecho con personas que necesitan orientación jurídica especializada.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSection('directory')">Directorio de Abogados</a></li>
+                        <li><a href="#" onclick="showSection('resources')">Recursos Legales</a></li>
+                        <li><a href="#" onclick="showSection('processes')">Guías de Procesos</a></li>
+                        <li><a href="#" onclick="showSection('chat')">Consulta Virtual</a></li>
+                        <li><a href="#" onclick="showSection('news')">Noticias Jurídicas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Áreas Legales</h3>
+                    <ul>
+                        <li><a href="#">Derecho Civil</a></li>
+                        <li><a href="#">Derecho Penal</a></li>
+                        <li><a href="#">Derecho Laboral</a></li>
+                        <li><a href="#">Derecho Fiscal</a></li>
+                        <li><a href="#">Derecho Mercantil</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@lexconsulta.es</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+34 900 123 456</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule">
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Código Ético</a>
+                </div>
+                <div class="copyright">
+                    © 2024 LexConsulta. Todos los derechos reservados.
+                </div>
+            </div>
+            
+            <div class="legal-notice">
+                <p><strong>Aviso Legal:</strong> LexConsulta es una plataforma informativa que conecta usuarios con profesionales legales. No proporcionamos asesoramiento legal directo. Toda la información proporcionada tiene carácter orientativo y no sustituye la consulta con un abogado colegiado. Los usuarios deben verificar la información legal actual y consultar con profesionales cualificados para casos específicos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
